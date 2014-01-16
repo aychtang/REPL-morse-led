@@ -30,7 +30,7 @@ var morse = function(letter) {
 		'z' : ['-','-','.','.']
 	};
 
-	return codes[letter].join('');
+	return codes[letter].join(' ');
 };
 
 var mapStr = function(str, fn) {
@@ -43,7 +43,7 @@ var mapStr = function(str, fn) {
 
 var sentanceBuilder = function(fn) {
 	return function(i) {
-		return fn(i) + ' ';
+		return fn(i) + '   ';
 	};
 };
 
